@@ -1,0 +1,115 @@
+<section class="secao">
+
+    <div class="titulo-secao">
+
+        <h2>Movimentação de Estoque</h2>
+
+    </div>
+
+    <div class="formulario">
+
+        <form id="form-movimentacao">
+
+            <label>
+                Produto
+            </label>
+
+            <select
+                id="movimentacao-produto"
+                required>
+
+                <option value="">
+                    Selecione um produto
+                </option>
+
+            </select>
+
+            <label>
+                Funcionário
+            </label>
+
+            <select
+                id="movimentacao-funcionario"
+                required>
+
+                <option value="">
+                    Selecione um funcionário
+                </option>
+
+            </select>
+
+            <label>
+                Quantidade
+            </label>
+
+            <input
+                type="number"
+                id="movimentacao-quantidade"
+                min="1"
+                required
+            >
+
+            <label>
+                Tipo de movimentação
+            </label>
+
+            <select
+                id="movimentacao-tipo"
+                required>
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option value="ENTRADA">
+                    Entrada
+                </option>
+
+                <option value="SAIDA">
+                    Saída
+                </option>
+
+            </select>
+
+            <button
+                type="submit"
+                class="botao-principal">
+
+                Registrar movimentação
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="estoque-consulta">
+
+        <h3>
+            Consultar estoque baixo
+        </h3>
+
+        <div class="linha-consulta">
+
+            <select id="produto-consulta">
+
+                <option value="">
+                    Selecione um produto
+                </option>
+
+            </select>
+
+            <button
+                onclick="verificarEstoqueBaixo()">
+
+                Verificar
+
+            </button>
+
+        </div>
+
+        <p id="resultado-estoque"></p>
+
+    </div>
+
+</section>

@@ -1,0 +1,352 @@
+<section id="funcionarios">
+
+    <div
+        id="lista-funcionarios-container">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Funcionários</h2>
+
+                <p>
+                    Gerencie os funcionários cadastrados.
+                </p>
+
+            </div>
+
+            <button
+                class="botao-principal"
+                onclick="abrirFormularioFuncionario()">
+
+                + Novo Funcionário
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="formulario-funcionario"
+            class="formulario oculto">
+
+            <h3>Novo Funcionário</h3>
+
+            <form id="form-funcionario">
+
+                <label for="funcionario-nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="funcionario-nome"
+                    required
+                >
+
+
+                <label for="funcionario-cpf">
+                    CPF
+                </label>
+
+                <input
+                    type="text"
+                    id="funcionario-cpf"
+                    required
+                >
+
+
+                <label for="funcionario-cargo">
+                    Cargo
+                </label>
+
+                <input
+                    type="text"
+                    id="funcionario-cargo"
+                    required
+                >
+
+
+                <label for="funcionario-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="funcionario-email"
+                    required
+                >
+
+
+                <div class="acoes-formulario">
+
+                    <button
+                        type="submit"
+                        class="botao-principal">
+
+                        Salvar
+
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="fecharFormularioFuncionario()">
+
+                        Cancelar
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Cargo</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="lista-funcionarios"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="detalhes-funcionario"
+        class="tela-funcionario oculto">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Funcionário</h2>
+
+                <p>
+                    Detalhes do funcionário.
+                </p>
+
+            </div>
+
+            <button
+                onclick="voltarListaFuncionarios()">
+
+                Voltar
+
+            </button>
+
+        </div>
+
+
+        <div class="detalhes-funcionario">
+
+            <div class="campo-detalhe">
+
+                <span>ID</span>
+
+                <strong
+                    id="detalhe-funcionario-id">
+                </strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Nome</span>
+
+                <strong
+                    id="detalhe-funcionario-nome">
+                </strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>CPF</span>
+
+                <strong
+                    id="detalhe-funcionario-cpf">
+                </strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Cargo</span>
+
+                <strong
+                    id="detalhe-funcionario-cargo">
+                </strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Email</span>
+
+                <strong
+                    id="detalhe-funcionario-email">
+                </strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Status</span>
+
+                <strong
+                    id="detalhe-funcionario-status">
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="edicao-funcionario"
+        class="tela-funcionario oculto">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Editar Funcionário</h2>
+
+                <p>
+                    Altere os dados do funcionário.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="form-edicao-funcionario">
+
+            <input
+                type="hidden"
+                id="edicao-funcionario-id"
+            >
+
+
+            <div class="formulario">
+
+                <label for="edicao-funcionario-nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="edicao-funcionario-nome"
+                    required
+                >
+
+
+                <label for="edicao-funcionario-cpf">
+                    CPF
+                </label>
+
+                <input
+                    type="text"
+                    id="edicao-funcionario-cpf"
+                    required
+                >
+
+
+                <label for="edicao-funcionario-cargo">
+                    Cargo
+                </label>
+
+                <input
+                    type="text"
+                    id="edicao-funcionario-cargo"
+                    required
+                >
+
+
+                <label for="edicao-funcionario-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="edicao-funcionario-email"
+                    required
+                >
+
+
+                <label for="edicao-funcionario-status">
+                    Status
+                </label>
+
+                <select
+                    id="edicao-funcionario-status"
+                    required>
+
+                    <option value="true">
+                        Ativo
+                    </option>
+
+                    <option value="false">
+                        Inativo
+                    </option>
+
+                </select>
+
+
+                <div class="acoes-formulario">
+
+                    <button
+                        type="submit"
+                        class="botao-principal">
+
+                        Salvar
+
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="voltarListaFuncionarios()">
+
+                        Voltar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>

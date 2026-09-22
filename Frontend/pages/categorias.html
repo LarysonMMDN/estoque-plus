@@ -1,0 +1,290 @@
+<section id="categorias">
+
+    <div
+        id="lista-categorias-container">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Categorias</h2>
+
+                <p>
+                    Gerencie as categorias dos produtos.
+                </p>
+
+            </div>
+
+            <button
+                class="botao-principal"
+                onclick="abrirFormularioCategoria()">
+
+                + Nova Categoria
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="formulario-categoria"
+            class="formulario oculto">
+
+            <h3>Nova Categoria</h3>
+
+            <form id="form-categoria">
+
+                <label for="categoria-nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="categoria-nome"
+                    maxlength="100"
+                    required
+                >
+
+
+                <label for="categoria-descricao">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="categoria-descricao"
+                    maxlength="255"
+                    rows="3"
+                    required
+                ></textarea>
+
+
+                <div class="acoes-formulario">
+
+                    <button
+                        type="submit"
+                        class="botao-principal">
+
+                        Salvar
+
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="fecharFormularioCategoria()">
+
+                        Cancelar
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Status</th>
+
+                        <th>Nome</th>
+
+                        <th>Descrição</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="lista-categorias"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="detalhes-categoria"
+        class="tela-categoria oculto">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Categoria</h2>
+
+                <p>
+                    Detalhes da categoria.
+                </p>
+
+            </div>
+
+            <button
+                onclick="voltarListaCategorias()">
+
+                Voltar
+
+            </button>
+
+        </div>
+
+
+        <div class="detalhes-categoria">
+
+            <div class="campo-detalhe">
+
+                <span>ID</span>
+
+                <strong id="detalhe-categoria-id"></strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Nome</span>
+
+                <strong id="detalhe-categoria-nome"></strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Descrição</span>
+
+                <strong id="detalhe-categoria-descricao"></strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Status</span>
+
+                <strong id="detalhe-categoria-status"></strong>
+
+            </div>
+
+
+            <div class="campo-detalhe">
+
+                <span>Data de cadastro</span>
+
+                <strong id="detalhe-categoria-data"></strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="edicao-categoria"
+        class="tela-categoria oculto">
+
+        <div class="titulo-secao">
+
+            <div>
+
+                <h2>Editar Categoria</h2>
+
+                <p>
+                    Altere os dados da categoria.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="form-edicao-categoria">
+
+            <input
+                type="hidden"
+                id="edicao-categoria-id"
+            >
+
+
+            <div class="formulario">
+
+                <label for="edicao-categoria-nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="edicao-categoria-nome"
+                    maxlength="100"
+                    required
+                >
+
+
+                <label for="edicao-categoria-descricao">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="edicao-categoria-descricao"
+                    maxlength="255"
+                    rows="4"
+                    required
+                ></textarea>
+
+
+                <label for="edicao-categoria-status">
+                    Status
+                </label>
+
+                <select
+                    id="edicao-categoria-status"
+                    required>
+
+                    <option value="true">
+                        Ativo
+                    </option>
+
+                    <option value="false">
+                        Inativo
+                    </option>
+
+                </select>
+
+
+                <div class="acoes-formulario">
+
+                    <button
+                        type="submit"
+                        class="botao-principal">
+
+                        Salvar
+
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="voltarListaCategorias()">
+
+                        Voltar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>

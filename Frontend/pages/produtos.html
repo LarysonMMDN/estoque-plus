@@ -1,0 +1,181 @@
+<section class="secao">
+
+    <div class="titulo-secao">
+
+        <h2>Produtos</h2>
+
+        <button
+            class="botao-principal"
+            onclick="abrirFormularioProduto()">
+
+            + Novo Produto
+
+        </button>
+
+    </div>
+
+    <div
+        id="formulario-produto"
+        class="formulario oculto">
+
+        <h3>Novo Produto</h3>
+
+        <form id="form-produto">
+
+            <label>
+                Nome
+            </label>
+
+            <input
+                type="text"
+                id="produto-nome"
+                required
+            >
+
+            <label>
+                Descrição
+            </label>
+
+            <input
+                type="text"
+                id="produto-descricao"
+            >
+
+            <label>
+                Preço
+            </label>
+
+            <input
+                type="number"
+                id="produto-preco"
+                step="0.01"
+                min="0"
+                required
+            >
+
+            <label>
+                Quantidade em estoque
+            </label>
+
+            <input
+                type="number"
+                id="produto-quantidade"
+                min="0"
+                required
+            >
+
+            <label>
+                Estoque mínimo
+            </label>
+
+            <input
+                type="number"
+                id="produto-minimo"
+                min="0"
+                required
+            >
+
+            <label>
+                Categoria
+            </label>
+
+            <select
+                id="produto-categoria"
+                required>
+
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+            </select>
+
+            <div class="acoes-formulario">
+
+                <button
+                    type="submit"
+                    class="botao-principal">
+
+                    Salvar
+
+                </button>
+
+                <button
+                    type="button"
+                    onclick="fecharFormularioProduto()">
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="tabela-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Mínimo</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="lista-produtos"></tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<div
+    id="modal-confirmacao"
+    class="modal-confirmacao oculto">
+
+    <div class="modal-confirmacao-conteudo">
+
+        <div class="modal-confirmacao-icone">
+            !
+        </div>
+
+        <h3>Confirmar exclusão</h3>
+
+        <p id="mensagem-confirmacao">
+            Deseja realmente excluir este produto?
+        </p>
+
+        <div class="modal-confirmacao-acoes">
+
+            <button
+                type="button"
+                id="btn-cancelar-confirmacao">
+
+                Cancelar
+
+            </button>
+
+            <button
+                type="button"
+                id="btn-confirmar-exclusao"
+                class="botao-excluir">
+
+                Excluir
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

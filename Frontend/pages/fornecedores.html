@@ -1,0 +1,250 @@
+<section id="fornecedores">
+<div
+    id="lista-fornecedores-container">
+
+    <div class="titulo-secao">
+
+        <div>
+
+            <h2>Fornecedores</h2>
+
+            <p>
+                Gerencie os fornecedores cadastrados.
+            </p>
+
+        </div>
+
+        <button
+            class="botao-principal"
+            onclick="abrirFormularioFornecedor()">
+
+            + Novo Fornecedor
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="formulario-fornecedor"
+        class="formulario oculto">
+
+        <h3>Novo Fornecedor</h3>
+
+        <form id="form-fornecedor">
+
+            <label for="fornecedor-razao-social">
+                Razão Social
+            </label>
+
+            <input
+                type="text"
+                id="fornecedor-razao-social"
+                required
+            >
+
+
+            <label for="fornecedor-nome-fantasia">
+                Nome Fantasia
+            </label>
+
+            <input
+                type="text"
+                id="fornecedor-nome-fantasia"
+            >
+
+
+            <label for="fornecedor-cnpj">
+                CNPJ
+            </label>
+
+            <input
+                type="text"
+                id="fornecedor-cnpj"
+                required
+            >
+
+
+            <label for="fornecedor-telefone">
+                Telefone
+            </label>
+
+            <input
+                type="text"
+                id="fornecedor-telefone"
+            >
+
+
+            <label for="fornecedor-email">
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="fornecedor-email"
+            >
+
+
+            <div class="acoes-formulario">
+
+                <button
+                    type="submit"
+                    class="botao-principal">
+
+                    Salvar
+
+                </button>
+
+                <button
+                    type="button"
+                    onclick="fecharFormularioFornecedor()">
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="tabela-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Razão Social</th>
+                    <th>Nome Fantasia</th>
+                    <th>CNPJ</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="lista-fornecedores"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<div
+    id="edicao-fornecedor"
+    class="tela-fornecedor oculto">
+
+    <div class="titulo-secao">
+
+        <div>
+
+            <h2>Editar Fornecedor</h2>
+
+            <p>
+                Altere os dados do fornecedor.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form id="form-edicao-fornecedor">
+
+        <input
+            type="hidden"
+            id="edicao-fornecedor-id"
+        >
+
+
+        <div class="formulario">
+
+            <label for="edicao-fornecedor-razao-social">
+                Razão Social
+            </label>
+
+            <input
+                type="text"
+                id="edicao-fornecedor-razao-social"
+                required
+            >
+
+
+            <label for="edicao-fornecedor-nome-fantasia">
+                Nome Fantasia
+            </label>
+
+            <input
+                type="text"
+                id="edicao-fornecedor-nome-fantasia"
+            >
+
+
+            <label for="edicao-fornecedor-cnpj">
+                CNPJ
+            </label>
+
+            <input
+                type="text"
+                id="edicao-fornecedor-cnpj"
+                required
+            >
+
+
+            <label for="edicao-fornecedor-telefone">
+                Telefone
+            </label>
+
+            <input
+                type="text"
+                id="edicao-fornecedor-telefone"
+            >
+
+
+            <label for="edicao-fornecedor-email">
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="edicao-fornecedor-email"
+            >
+
+
+            <div class="acoes-formulario">
+
+                <button
+                    type="submit"
+                    class="botao-principal">
+
+                    Salvar
+
+                </button>
+
+                <button
+                    type="button"
+                    onclick="voltarListaFornecedores()">
+
+                    Voltar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+</section>

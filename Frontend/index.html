@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estoque+</title>
+    <script>
+
+        const temaSalvo =
+            localStorage.getItem("tema");
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            temaSalvo || "dark"
+        );
+
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+    <div class="topo-esquerda">
+
+        <div>
+
+            <h1>Estoque</h1>
+
+            <span>
+                Sistema de Controle de Estoque
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="topo-direita">
+
+        <button
+            type="button"
+            id="botao-tema"
+            class="botao-tema"
+            onclick="alternarTema()"
+            title="Alterar tema">
+
+            <span id="icone-tema">
+                ☀️
+            </span>
+
+            <span id="texto-tema">
+                Tema claro
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <button onclick="abrirPagina('dashboard')">
+                Dashboard
+            </button>
+
+            <button onclick="abrirPagina('produtos')">
+                Produtos
+            </button>
+
+            <button onclick="abrirPagina('categorias')">
+                Categorias
+            </button>
+
+            <button onclick="abrirPagina('fornecedores')">
+                Fornecedores
+            </button>
+
+            <button onclick="abrirPagina('funcionarios')">
+                Funcionários
+            </button>
+
+            <button onclick="abrirPagina('estoque')">
+                Movimentação de Estoque
+            </button>
+
+        </aside>
+
+        <main id="conteudo" class="conteudo"></main>
+
+    </div>
+
+    <div
+        id="modal-confirmacao"
+        class="modal-confirmacao oculto">
+
+        <div class="modal-confirmacao-conteudo">
+
+            <div class="modal-confirmacao-icone">
+                !
+            </div>
+            <h3>
+                Confirmar ação
+            </h3>
+            <p id="mensagem-confirmacao">
+                Deseja realmente realizar esta ação?
+            </p>
+            <div class="modal-confirmacao-acoes">
+                <button
+                    type="button"
+                    id="btn-cancelar-confirmacao">
+                    Cancelar
+                </button>
+                <button
+                    type="button"
+                    id="btn-confirmar-acao"
+                    class="botao-excluir">
+                    Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="/js/confirmacao.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/produtos.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/fornecedores.js"></script>
+    <script src="js/funcionarios.js"></script>
+    <script src="js/estoque.js"></script>
+    <script src="js/tema.js"></script>
+
+
+</body>
+
+</html>
