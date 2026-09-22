@@ -4,6 +4,8 @@ import br.com.estoquep.entity.Produto;
 import br.com.estoquep.entity.Funcionario;
 import br.com.estoquep.entity.MovimentacaoEstoque;
 import br.com.estoquep.enums.TipoMovimentacao;
+import br.com.estoquep.exception.EstoqueInsuficienteException;
+import br.com.estoquep.exception.RecursoNaoEncontradoException;
 import br.com.estoquep.repository.ProdutoRepository;
 import br.com.estoquep.repository.MovimentacaoEstoqueRepository;
 import org.springframework.stereotype.Service;
@@ -45,7 +47,7 @@ public class EstoqueService {
         Funcionario funcionario = funcionarioService.buscarPorId(funcionarioId);
 
         if (quantidade > produto.getQuantidadeEstoque()) {
-            throw new IllegalArgumentException(
+            throw new EstoqueInsuficienteException(
                     "Estoque insuficiente. Disponível: " + produto.getQuantidadeEstoque() + ", solicitado: " + quantidade
             );
         }
@@ -66,7 +68,7 @@ public class EstoqueService {
 
     private Produto buscarProduto(Long produtoId) {
         return produtoRepository.findById(produtoId)
-                .orElseThrow(() -> new RuntimeException("Produto não encontrado com id: " + produtoId));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Produto não encontrado com id: " + produtoId));
     }
 
     private void validarQuantidade(Integer quantidade) {

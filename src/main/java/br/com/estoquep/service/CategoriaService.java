@@ -35,6 +35,7 @@ public class CategoriaService {
         Categoria categoria = buscarPorId(id);
         categoria.setNome(dadosAtualizados.getNome());
         categoria.setDescricao(dadosAtualizados.getDescricao());
+        categoria.setStatus(dadosAtualizados.getStatus());
         return categoriaRepository.save(categoria);
     }
 

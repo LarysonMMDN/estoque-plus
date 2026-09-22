@@ -25,6 +25,8 @@ public class Fornecedor {
     public Fornecedor() {
     }
 
+    public Long getId() { return id; }
+
     public String getRazaoSocial() {
         return razaoSocial;
     }

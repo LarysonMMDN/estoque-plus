@@ -25,7 +25,6 @@ public class Categoria {
     private LocalDateTime dataCadastro;
 
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
-    @JsonIgnore
     private List<Produto> produtos = new ArrayList<>();
 
     public Categoria(){}
@@ -35,6 +34,10 @@ public class Categoria {
         this.descricao = descricao;
         this.status = true;
         this.dataCadastro = LocalDateTime.now();
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getNome() {
@@ -61,7 +64,7 @@ public class Categoria {
         this.status = status;
     }
 
-    public LocalDateTime getDataCasdastro() {
+    public LocalDateTime getDataCadastro() {
         return dataCadastro;
     }
 
